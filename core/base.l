@@ -2,11 +2,11 @@
     #include <stdio.h>
     #include <stdlib.h>
 %}
-%option outfile="Scanner.c" 
+%option outfile="core/Scanner.c" 
 
 %%
-    <Regular_expression>
-    {this->regex}   {this->instruccion}
+
+\n {fprintf(yyout, "<br>", "");}
 %%
 
 int yywrap(){}

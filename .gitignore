@@ -1,0 +1,7 @@
+**/*.exe 
+**/*.out 
+data_entry.txt
+**/*.html
+base.l
+Scanner.c
+lexic.l
