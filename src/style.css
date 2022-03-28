@@ -1,0 +1,71 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.4rem;
+    /* background-color: #00141e; */
+    margin: 0;
+    background: rgb(15, 23, 42);
+    width: 100%;
+    height: 100%;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 80%; 
+    width: 800px;
+}
+
+#code-input {
+    margin-top: 5rem;
+    border: 1px solid rgb(129, 206, 188);
+    margin-bottom: 5rem;
+    font-size: 1.3rem;
+    background-color: rgb(30, 40, 51);
+    padding: 2rem;
+    border-radius: 1rem;
+    color: white; 
+    -webkit-box-shadow: 5px 5px 50px 8px #FF9DF5; 
+    box-shadow: 5px 5px 50px 8px rgb(23, 61, 57);
+}
+
+.regex-0 {
+    color: #E74C3C;
+}
+.regex-1 {
+    color: #3498DB;
+}
+.regex-2 {
+    color: #D4AC0D;
+}
+.regex-3 {
+    color: #D4AC0D;
+}
+.regex-4 {
+    color: #9B59B6;
+}
+.regex-5 {
+    color: #D35400;
+}
+.regex-6 {
+    color: #ffffff;
+}
+.regex-7 {
+    color: #D68910;
+}
+.regex-8 {
+    color: #1ABC9C;
+}
+.regex-9 {
+    color: #2ECC71;
+}
+.regex-10 {
+    color: #27AE60;
+}   
+.regex-11 {
+    color: #C0392B;
+}
+.regex-12 {
+    color: #F39C12;
+}

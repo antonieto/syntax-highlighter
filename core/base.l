@@ -7,13 +7,16 @@
 %%
 
 \n {fprintf(yyout, "<br>", "");}
+[\t] {fprintf(yyout, "&emsp;", "");}
+" " {fprintf(yyout, "&nbsp;", "");}
+
 %%
 
 int yywrap(){}
 int main(int argc, char **argv) {
 
     yyin = fopen("data_entry.txt", "r");
-    yyout = fopen("index.html", "w");
+    yyout = fopen("core/output.html", "w");
     yylex();
     fclose(yyin);
     fclose(yyout);
