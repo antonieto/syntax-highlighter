@@ -1,6 +1,9 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+string REGEX_ROUTE;
+string INPUT;
+
 vector<string> COLORS = {
     "#E74C3C",
     "#3498DB",
@@ -97,22 +100,21 @@ void buildHTML(){
 
 }
 
-int main(){
+int main(int argc, char **argv){
 
-    // if(argc < 2){
-    //     cout << "File names required" << endl;
-    //     return 0;
-    // }
+    REGEX_ROUTE = argv[1];
+    INPUT = argv[2];
+
+    if(argc < 2){
+        cout << "Provide 2 arguments (regex file followed by input file)" << endl;
+        return 0;
+    }
     
-    string regex_route = "regex.txt"; 
-    
-    vector<RegularExpression> regex_vector = getRegExpressions(regex_route);
-    // cout << regex_vector.size()<< endl;
+    vector<RegularExpression> regex_vector = getRegExpressions(REGEX_ROUTE);
     createLFile(regex_vector);
-    
     system("flex core/lexic.l");
     system("gcc core/Scanner.c -o highlighter");
-    system("highlighter");
+    system(string("highlighter " + INPUT).c_str());
     // Build index.html
     buildHTML();
 
