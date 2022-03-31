@@ -10,7 +10,7 @@
 "true"|"false"|"True"|"False"|"null"|"void"|"string"|"int"|"None"|"public"|"namespace"|"NaN" {fprintf(yyout, "<span class='regex-1'>%s</span>", yytext);}
 "("|")"|"{"|"}"|"["|"]" {fprintf(yyout, "<span class='regex-2'>%s</span>", yytext);}
 "//".*|"#".* {fprintf(yyout, "<span class='regex-3'>%s</span>", yytext);}
-"\"".*"\"" {fprintf(yyout, "<span class='regex-4'>%s</span>", yytext);}
+[\"\'].*[\"\'] {fprintf(yyout, "<span class='regex-4'>%s</span>", yytext);}
 "-"?[0-9]+[eE]?[0-9] {fprintf(yyout, "<span class='regex-5'>%s</span>", yytext);}
 [a-zA-Z_]+[a-zA-Z_0-9]* {fprintf(yyout, "<span class='regex-6'>%s</span>", yytext);}
 "-"?[0-9]+"."[0-9]+[eE]?[0-9]+ {fprintf(yyout, "<span class='regex-7'>%s</span>", yytext);}
